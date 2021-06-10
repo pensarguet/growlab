@@ -1,7 +1,7 @@
 #!/bin/bash
 python3 app.py
 
-export GIT_SSH_COMMAND="ssh -i `pwd`/.ssh/id_rsa"
+export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa"
 
 cp ${HOME}/growlab/app/html/* ${HOME}/growlab/docs/
 
