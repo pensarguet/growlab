@@ -1,4 +1,5 @@
 #!/bin/bash
+export SENSOR_TYPE=bme680
 python3 app.py
 
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa"
