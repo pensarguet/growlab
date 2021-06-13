@@ -1,4 +1,5 @@
 #!/bin/bash
+
 export SENSOR_TYPE=bme680
 
 export GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa"

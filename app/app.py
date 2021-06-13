@@ -20,14 +20,14 @@ if __name__ == "__main__":
     print("Loaded config, saving images every {} seconds to {}".format( config["images"]["interval_seconds"], config["images"]["output_directory"]))
 
     sensor = None
-    sensor_type = os.getenv("SENSOR_TYPE", "bme280")
+    sensor_type = os.getenv("SENSOR_TYPE", "none")
     print("sensor type:",sensor_type);
     if sensor_type == "bme280":
         sensor = growbme280()
     if sensor_type == "bmp280":
         sensor = growbmp280()
     if sensor_type == "bme680":
-        sensor = growbme680()
+        sensor = growbme680(config["sensors"]["oversample"])
     elif sensor_type == "none":
         sensor = grownosensor()
 
